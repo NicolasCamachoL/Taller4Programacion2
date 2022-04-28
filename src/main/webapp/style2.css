@@ -1,0 +1,20 @@
+body{
+    background: bisque;
+}
+h1 {
+    color: #672d8d;
+    font-family: "Victor Mono";
+    font-size: 400%;
+}
+a{
+    display: inline;
+    padding: 22px;
+    font-family: "French Script MT";
+    font-size: 200%;
+}
+div {
+    height: 100px;
+    object-position: center;
+    margin: 20px;
+}
+

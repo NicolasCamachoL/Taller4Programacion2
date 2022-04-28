@@ -1,4 +1,4 @@
-package co.edu.unbosque.wresweb;
+package co.edu.unbosque.wresweb.servlets;
 
 import co.edu.unbosque.wresweb.dtos.User;
 import co.edu.unbosque.wresweb.services.UserService;
