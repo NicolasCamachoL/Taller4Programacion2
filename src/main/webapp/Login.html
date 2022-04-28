@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="icon" href="innersanctuary.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form id="formElem" method="post" action="/LogInServlet">
+    <div class="container">
+        <h1>Register</h1>
+        <hr>
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="username" id="username" required>
+
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" id="password" required>
+
+        <label for="role"><b>Role</b></label>
+        <input type="text" placeholder="role" name="role" id="role" required>
+        <hr>
+        <button type="submit" class="loginbtn">Login</button>
+        <hr>
+        <p>No tienes cuenta? <a href="SignUp.html" class="login">Sign in</a>.</p>
+    </div>
+</form>
+<script>
+    formElem.onsubmit = async (e) => {
+        e.preventDefault();
+
+        let response = await fetch('http://localhost:8080/Taller4Programacion2-1.0-SNAPSHOT/api/users', {
+            method: 'GET',
+            body: new FormData(formElem)
+        });
+
+        let result = await response.json();
+
+        alert(result.message);
+    };
+</script>
+</body>
+</html>
